@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+html{
+    width:21cm;
+}
+
+body{margin:15mm 14mm 15mm 14mm;
+}
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 15mm 14mm 15mm 14mm; 
+    }
+}
+
+.a4 {
+	page: main;
+	padding-top:1.5cm;
+	padding-bottom:1.5cm;
+	padding-left: 2.54cm;
+	padding-right: 2.54cm;
+}
+
+.paragraph-text {
+    font-family: calibri;
+    font-size: 8pt;
+    text-align: left;
+    margin-top: 0mm;
+}
+
+.heading-1{
+    font-size: 16pt;
+    font-family: Arial;
+    color:darkblue;
+    font-weight: bold;
+    margin-bottom:1mm;
+}
+
+.heading-2{
+    font-size: 13pt;
+    font-family: Arial;
+    color:darkblue;
+    font-weight: bold;
+    margin-bottom: 1mm;
+}
+
+.heading-3{
+    font-size: 12pt;
+    font-family: Arial;
+    color:darkblue;
+    font-weight: bold;
+    margin-bottom: 1mm;
+}
+.list-header {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18pt;
+    line-height: 24pt;
+    text-align: left;
+    text-indent: 0.2cm;
+    border: 0.5pt solid rgba(0,51,81,1.00);
+    border-spacing: 6pt 6pt;
+    background-color: rgba(0,71,91,1.00);
+    padding-left: 0.2cm;
+    padding-right: 0.2cm;
+}
+
+
+.note{
+    font-family: calibri;
+    font-size: 11pt;
+    color: black;
+    background: rgb(222,234,246);
+    margin-left: 0.65cm;
+    padding-top: 0.1cm;
+    padding-bottom: 0.1cm;
+    padding-left: 6pt;
+    padding-right: 6pt;
+    }
+
+
+.caution-box{
+    font-family:calibri;
+    font-size: 13pt;
+    font-style: italic;
+    color: black;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    background: rgba(253,200,47,.5);
+    margin-left: 0.65cm;
+    padding-top: 0.1cm;
+    padding-bottom: 0.1cm;
+    padding-left: 6pt; 
+    padding-right: 6pt;
+}
+
+.caution-box:before{
+    content:"Caution: ";
+    font-weight:bold;
+}
+.warning-header{
+    color:white;
+    font-size: 13;
+    font-weight:bold;
+    font-style:italic;
+    font-family:calibri;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    background: red;
+    margin-left: 0.65cm;
+    margin-bottom:0cm;
+    padding-top: 0.1cm;
+    padding-left: 6pt; 
+    padding-right: 6pt;
+}
+.warning-header::before {
+  content: "WARNING!"
+}
+
+.warning-body{
+    font-family:calibri;
+    font-size: 13pt;
+    font-style: italic;
+    color: black;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    background: rgba(253,200,47,.5);
+    margin-top:0cm;
+    margin-left: 0.65cm;
+    padding-top: 0.1cm;
+    padding-bottom: 0.1cm;
+    padding-left: 6pt; 
+    padding-right: 6pt;
+}
+
+.list-footer{
+    border-top-style:solid;
+    border-bottom-style:solid;
+    text-align: center;
+    font-family: Calibri;
+    font-size:13pt;
+    background-color: rgba(255,192,0,0.1);
+}
+
+.list-footer::before{
+    content:"⏹⏹ Completed ⏹⏹";
+}
+
+
+
+.dot-leader-object {
+    /* Center the content */
+    align-items:bottom;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot-leader-action {
+    /* Center the content */
+    align-items:flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot-leader-dots {
+    /* Bottom border */
+    background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 7px 2px;
+    background-repeat: repeat-x;
+    
+
+    /* Take remaining width */
+    flex: 1;
+
+    /* Spacing */
+    margin:  0.2rem;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+input{
+  height: 5mm;
+  width: 5mm;
+  border-width: thick;
+}
+
+ /* List styles*/
+
+ol { padding-left: .3cm;
+    --ur: upper-roman;
+    --lr: lower-roman;
+    --ua: Upper-alpha;
+    --la: lower-alpha;
+    --de: decimal;
+    --dl: decimal-leading-zero;
+    
+    --ds: disc;
+    --ci: circle;
+    --sq: square;
+    --no: none;            
+}
+
+
+ol.l3 > li {
+    list-style: none;
+}
+
+ol.l3 > li:before {
+    content:"- ";
+}
+
+
+/* To change the list style, change the custom property (between the parentheses).  */
+
+.l1 {
+    list-style-type: var(--de);
+    padding-left:1cm;
+}
+
+
+.l2 {
+    list-style-type: var(--la);
+}
+
+
+.l3 {
+    padding-left:0cm;
+    list-style-type:disc;
+}
+
+.l4 {
+    list-style-type: var(--la);
+}
+.l5 {
+    list-style-type: var(--lr);
+}
+
+.l1 li{
+    font-size: 13;
+    font-style: normal;
+    font-family: Calibri;
+    margin-left:-1em;
+}
+
+.l2 li, .l3 li, .l4 li, .l5 li {
+  font-size: 0.95em;
+}
+
+
+.l3 li{font-size: 11px;
+}
+
+.l4 li{font-weight: 500;
+ /* font-size: 1.1rem;*/
+  font-style: normal;
+}
+.l5 li{font-weight: 400;
+ /* font-size: 1rem;*/
+  font-style: normal;
+}
+
+/* Styling by classes */
+
+.upper-roman {
+    list-style-type: upper-roman;
+    margin-left: -1em;
+}
+.upper-alpha {
+    list-style-type: upper-alpha;
+    margin-left: -1em;
+}
+.decimal {
+    list-style-type: decimal;
+    margin-left: -1em;
+}
+.lower-alpha {
+    list-style-type: lower-alpha;
+    margin-left: -0em;
+}
+.lower-roman {
+    list-style-type: lower-roman;
+    margin-left: -1em;
+}
