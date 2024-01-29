@@ -23,7 +23,7 @@ body{margin:15mm 14mm 15mm 14mm;
 }
 
 .paragraph-text {
-    font-family: calibri;
+    font-family: helvetica;
     font-size: 8pt;
     text-align: left;
     margin-top: 0mm;
@@ -69,20 +69,25 @@ body{margin:15mm 14mm 15mm 14mm;
 
 
 .note{
-    font-family: calibri;
+    font-family: helvetica;
     font-size: 11pt;
     color: black;
     background: rgb(222,234,246);
     margin-left: 0.65cm;
     padding-top: 0.1cm;
     padding-bottom: 0.1cm;
-    padding-left: 6pt;
     padding-right: 6pt;
+    text-indent:-40px;
+    padding-left:40px;
     }
 
+.note::before{
+    content:"Note: ";
+    font-weight: bold;
+}
 
 .caution-box{
-    font-family:calibri;
+    font-family:helvetica;
     font-size: 13pt;
     font-style: italic;
     color: black;
@@ -93,20 +98,23 @@ body{margin:15mm 14mm 15mm 14mm;
     margin-left: 0.65cm;
     padding-top: 0.1cm;
     padding-bottom: 0.1cm;
-    padding-left: 6pt; 
     padding-right: 6pt;
+    text-indent:-78px;
+    padding-left:88px;
 }
 
 .caution-box:before{
     content:"Caution: ";
     font-weight:bold;
+    text-align: left;
 }
+
 .warning-header{
     color:white;
     font-size: 13;
     font-weight:bold;
     font-style:italic;
-    font-family:calibri;
+    font-family:helvetica;
     border-color: red;
     border-style: solid;
     border-width: 2px;
@@ -122,7 +130,7 @@ body{margin:15mm 14mm 15mm 14mm;
 }
 
 .warning-body{
-    font-family:calibri;
+    font-family:helvetica;
     font-size: 13pt;
     font-style: italic;
     color: black;
@@ -142,7 +150,7 @@ body{margin:15mm 14mm 15mm 14mm;
     border-top-style:solid;
     border-bottom-style:solid;
     text-align: center;
-    font-family: Calibri;
+    font-family: helvetica;
     font-size:13pt;
     background-color: rgba(255,192,0,0.1);
 }
@@ -220,13 +228,7 @@ ol { padding-left: .3cm;
 }
 
 
-ol.l3 > li {
-    list-style: none;
-}
 
-ol.l3 > li:before {
-    content:"- ";
-}
 
 
 /* To change the list style, change the custom property (between the parentheses).  */
@@ -241,10 +243,9 @@ ol.l3 > li:before {
     list-style-type: var(--la);
 }
 
-
 .l3 {
     padding-left:0cm;
-    list-style-type:disc;
+    list-style-type: var(--ds);
 }
 
 .l4 {
@@ -257,7 +258,7 @@ ol.l3 > li:before {
 .l1 li{
     font-size: 13;
     font-style: normal;
-    font-family: Calibri;
+    font-family: helvetica;
     margin-left:-1em;
 }
 
