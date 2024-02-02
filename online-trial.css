@@ -79,6 +79,8 @@ body{margin:15mm 14mm 15mm 14mm;
     padding-right: 6pt;
     text-indent:-40px;
     padding-left:40px;
+    margin-bottom: 0.2cm;
+    margin-top: 0.2cm;
     }
 
 .note::before{
@@ -101,6 +103,8 @@ body{margin:15mm 14mm 15mm 14mm;
     padding-right: 6pt;
     text-indent:-78px;
     padding-left:88px;
+    margin-top:0.2cm;
+    margin-bottom: 0.2cm;
 }
 
 .caution-box:before{
@@ -121,6 +125,7 @@ body{margin:15mm 14mm 15mm 14mm;
     background: red;
     margin-left: 0.65cm;
     margin-bottom:0cm;
+    margin-top: 0.2cm;
     padding-top: 0.1cm;
     padding-left: 6pt; 
     padding-right: 6pt;
@@ -144,6 +149,7 @@ body{margin:15mm 14mm 15mm 14mm;
     padding-bottom: 0.1cm;
     padding-left: 6pt; 
     padding-right: 6pt;
+    margin-bottom: 0.2cm;
 }
 
 .list-footer{
@@ -214,6 +220,7 @@ input{
  /* List styles*/
 
 ol { padding-left: .3cm;
+    margin-bottom: 0.2cm;
     --ur: upper-roman;
     --lr: lower-roman;
     --ua: Upper-alpha;
@@ -236,16 +243,21 @@ ol { padding-left: .3cm;
 .l1 {
     list-style-type: var(--de);
     padding-left:1cm;
+    margin-bottom: 0.2cm;
 }
 
 
 .l2 {
     list-style-type: var(--la);
+    margin-top: 0.1cm;
+    margin-bottom: 0.1cm;
 }
 
 .l3 {
     padding-left:0cm;
     list-style-type: var(--ds);
+    margin-top: 0.1cm;
+    margin-bottom: 0.2cm;
 }
 
 .l4 {
